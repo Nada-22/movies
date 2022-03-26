@@ -5,7 +5,7 @@
   font-size: 180px;
   font-family: 'Catamaran', sans-serif;
   font-weight: 800;
-  margin: 20px 15px;
+  /* margin: 15px 10px; */
 }
 .error-container > span {
   display: inline-block;
@@ -130,7 +130,7 @@
     box-sizing: border-box;
 }
 body {
-  background-color: #416475 ;
+  background-color: #416475;
   margin-bottom: 50px;
 }
 html, button, input, select, textarea {
