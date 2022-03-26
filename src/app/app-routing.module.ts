@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HeaderComponent } from './components/header/header.component';
 
 const routes: Routes = [
-  { path: "header", component: HeaderComponent  },
-  // { path: "hello", component: HeaderComponent, data: { routeName: "Hello2" } }
+  {
+    path: '', 
+    loadChildren: () => import('./components/layout/layout.module').then(m => m.LayoutModule)
+  },
+  {
+    path: '**', 
+    loadChildren: () => import('./components/notfound/notfound.module').then(m => m.NotfoundModule)
+  },
 ];
 
 @NgModule({
@@ -15,7 +20,4 @@ export class AppRoutingModule {
   
 }
 
-// routes.forEach((eachRoute) => {
-//   RouteNames.routeNamesObject[eachRoute.data.routeName] = eachRoute.path;    // now all route paths are added to this prop
-// })
-//  const routeNames = RouteNames;
+
