@@ -1,0 +1,17 @@
+.home{
+    background-image: url(../../../../assets/img/home__bg.jpg);
+    height: auto;
+    opacity:0.7;
+    background-color: Black;
+    z-index:10;
+    filter: brightness(35%);
+}
+.home__title{
+    
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    padding-right: 120px;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
