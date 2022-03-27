@@ -1,10 +1,18 @@
+.container{
+    max-width: 1432px;
+    
+}
+
 .home{
     background-image: url(../../../../assets/img/home__bg.jpg);
-    height: auto;
-    opacity:0.7;
-    background-color: Black;
-    z-index:10;
-    filter: brightness(35%);
+    background-position:unset;
+    height: 700px;
+    /* opacity:0.7; */
+    /* background-color: Black; */
+    /* z-index:10;
+    filter: brightness(35%); */
+    /* position: relative; */
+    padding-left: 60px;
 }
 .home__title{
     
@@ -15,3 +23,32 @@
     font-size: 36px;
     margin-bottom: 10px;
 }
+.movie{
+    /* position: absolute; */
+    /* top: 227px; */
+float: left;
+
+}
+.moviecont{
+    /* display: grid;  
+    grid-gap:250px;  
+    grid-template-columns: repeat(2, 0px);
+    grid-template-rows: repeat(2, 0px); */
+}
+
+
+.row--grid .col-6, .row--grid .col-12 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.col-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+/* @media screen{
+img{
+    width: 150px;
+    float: left;
+}
+} */
