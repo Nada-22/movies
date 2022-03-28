@@ -16,3 +16,14 @@ nav ,.logo:hover{
     background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
     opacity: 0.85;
 }
+@media only screen and (max-width: 620px) {
+    .logo , .btn{
+        margin: 0px;
+        padding: 0px;
+        height: 50px;
+        width: 90px;
+    }
+    .container-fluid ,nav {
+        max-width: 100%;
+    }
+}

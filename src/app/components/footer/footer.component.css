@@ -1,0 +1,6 @@
+@media only screen and (max-width: 620px) {
+    .container , .btn , footer{
+    max-width: 100%;
+
+    }
+}
