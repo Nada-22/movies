@@ -6,6 +6,11 @@ const routes: Routes = [
     path: '', 
     loadChildren: () => import('./components/layout/layout.module').then(m => m.LayoutModule)
   },
+ 
+  {
+    path: 'user', 
+    loadChildren: () => import('./components/user/user.module').then(m => m.UserModule)
+  },
   {
     path: '**', 
     loadChildren: () => import('./components/notfound/notfound.module').then(m => m.NotfoundModule)
