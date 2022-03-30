@@ -7,10 +7,10 @@
 }
 
 .home{
-    background-image: url(src/assets/img/home__bg.jpg);
-    background-position:unset;
+    background-image: url(../../../../assets/img/section.jpg);
+    background-position:center;
     height: 700px;
-    padding-left: 60px;
+    padding-left: 90px;
 }
 .home__title{
     
@@ -39,23 +39,23 @@
   .card {
     position: relative;
     overflow: hidden;
-    width: 320px;
-    height: 450px;
+    width: 280px;
+    height: 420px;
     /* margin:  auto; */
     /* background: #2a264f; */
     /* border: 5px solid #1a163f; */
     border: none;
     border-radius: 3px;
     box-shadow: 0 0 10px #414044;
-    float: left;
-    margin-right: 15px;
+    /* float: left; */
+    margin-right: 40px;
   }
   
   .card .img1 {
     position: absolute;
     top: 0;
     left: 0;
-    height: 60%;
+    height: 100%;
     width: 100%;
     /* background-image: url(../../../../assets/img/cover4.jpg); */
     background-size: 310px 440px;
@@ -63,18 +63,18 @@
     transition: all 0.5s ease-in-out;
   }
   
-  .card .img2 {
+  /* .card .img2 {
     position: absolute;
     bottom: 0;
     left: 0;
     height: 40%;
     width: 100%;
-    /* background-image: url(../../../../assets/img/cover4.jpg); */
+    background-image: url(../../../../assets/img/cover4.jpg);
     background-size: 310px 440px;
     background-position: left bottom;
     
     transition: all 0.5s ease-in-out;
-  }
+  } */
   
   .card .title {
     height: 22%;
@@ -147,10 +147,10 @@
     /* opacity: 0.9; */
     background-color: rgba(0,0,0,.8) !important;
   }
-  .card:hover .img2 {
+  /* .card:hover .img2 { */
     /* transform: rotate(90deg) translate(0px, 150px);
     transform-origin: -20px 200px; */
-  }
+  /* } */
   
   .card:hover .text {
     opacity: 0.8;
@@ -162,11 +162,11 @@
     transform: translate(0);
   }
 @media only screen and (max-width: 620px) {
-    img {
+    /* img { */
     /* max-width:200%; */
-}
+/* } */
 .movie{
-    float: left;
+    /* float: left; */
     margin-right:3px;
     margin-left: 20px;
 }
@@ -188,4 +188,134 @@ max-width: 100%;
 
 /* font-size:xx-small; */
 }
+}
+/* section 2 */
+/* @import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap"); */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Istok Web", sans-serif;
+}
+
+.section2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 65vh;
+  background: #212121;
+  padding-left: 90px;
+}
+
+.card2 {
+  display: flex;
+  position: relative;
+  width: 200px;
+  height: 350px;
+  background: #191919;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* .card2::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  background: #ffce00;
+  transform: skewY(345deg);
+  transition: 0.5s;
+} */
+
+.card2:hover::before {
+  top: -70%;
+  transform: skewY(390deg);
+}
+
+.card2::after {
+  content: "CORSAIR";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 6em;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.card2 .imgBox {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 20px; */
+  z-index: 1;
+}
+/*
+.card .imgBox img {
+    max-width: 100%;
+    
+    transition: .5s;
+}
+
+.card:hover .imgBox img {
+    max-width: 50%;
+      
+}
+*/
+.card2 .contentBox {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.card2 .contentBox h3 {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  
+
+}
+
+.card2 .contentBox .price {
+  font-size: 24px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+/* .cardtitle{
+  
+} */
+.card2 .contentBox .buy {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  width: 170px;
+  padding: 10px 30px;
+  
+  margin-top: 15px;
+  color: #000000;
+  text-decoration: none;
+  background: #fa4f9f;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+.card2:hover .contentBox .buy {
+  top: 0;
+  opacity: 1;
+}
+
+.mouse {
+  height: 300px;
+  width: auto;
 }
