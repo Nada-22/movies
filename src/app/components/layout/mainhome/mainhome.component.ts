@@ -11,10 +11,26 @@ export class MainhomeComponent implements OnInit {
 
   ngOnInit(): void {
     $(document).ready(function(){
-      $(".wish-icon ").click(() =>{
-        $(".wish-icon ").toggleClass("fa fa-heart-o");
+
+      // $('#itemslider').carousel({ interval: 3000 });
+      
+      $('.carousel-showmanymoveone .item').each(function(){
+      var itemToClone = $(this);
+      
+      for (var i=1;i<6;i++) {
+      itemToClone = itemToClone.next();
+      
+      if (!itemToClone.length) {
+      itemToClone = $(this).siblings(':first');
+      }
+      
+      itemToClone.children(':first-child').clone()
+      .addClass("cloneditem-"+(i))
+      .appendTo($(this));
+      }
       });
-    });	
+      });
+      
   }
 
 }
