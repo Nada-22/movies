@@ -74,7 +74,7 @@ h6 span{
   padding: 0;
   margin: 10px auto;
   cursor: pointer;
-  background-color: #ffeba7;
+  background-color: #fafafa;
 }
 .checkbox:checked + label:before,
 .checkbox:not(:checked) + label:before{
@@ -83,7 +83,7 @@ h6 span{
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  color: #ffeba7;
+  color: #f7f7f7;
   background-color: #fa4f9f;
   font-family: 'unicons';
   content: '\eb4f';

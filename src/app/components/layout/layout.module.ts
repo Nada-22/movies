@@ -6,8 +6,8 @@ import { MainhomeComponent } from './mainhome/mainhome.component';
 
 
 const routes: Routes = [
-  { path: "", component: HomeComponent },
-  { path: "mainhome", component: MainhomeComponent},
+  // { path: "", component: HomeComponent },
+  { path: "", component: MainhomeComponent},
   
 ];
 
