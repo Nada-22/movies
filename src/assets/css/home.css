@@ -77,7 +77,8 @@
   
   .carousel-showmanymoveone .carousel-control {
     width: 4%;
-    background-image: none;
+    /* background-image: none; */
+    /* background-color: #b20c0c; */
   }
   .carousel-showmanymoveone .carousel-control.left {
     margin-left: 5px;

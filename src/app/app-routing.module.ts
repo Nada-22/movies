@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: () => import('./components/user/user.module').then(m => m.UserModule)
   },
   {
+    path: 'view', 
+    loadChildren: () => import('./components/details/details.module').then(m => m.DetailsModule)
+  },
+  {
     path: '**', 
     loadChildren: () => import('./components/notfound/notfound.module').then(m => m.NotfoundModule)
   },
