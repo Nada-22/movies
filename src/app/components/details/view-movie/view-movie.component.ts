@@ -20,6 +20,8 @@ export class ViewMovieComponent implements OnInit {
     //  alert(this.movie_id)
       this.getmoviedetails();
     });
+    // this.getmovierecommendations();
+    
   }
 
   getmoviedetails() {
@@ -35,5 +37,18 @@ export class ViewMovieComponent implements OnInit {
       }
     )
     
+  }
+  getmovierecommendations() {
+    this._Moviesservices.getrecommendations(this.movie_id).subscribe(
+      (res: any) => {
+        // console.log(res);
+        this.movie = res;
+        console.log(this.movie);
+        
+      }, (err: any) => {
+        console.log(err);
+        
+      }
+    )
   }
 }

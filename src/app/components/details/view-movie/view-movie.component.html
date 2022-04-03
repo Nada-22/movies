@@ -3,6 +3,7 @@
  padding: 100px;">
   <div>
       <h1 class="text-white">{{movie.original_title}}</h1>
+      
     </div>
     <br><br>
     <div class="text-white">
@@ -12,11 +13,17 @@
     </div>
     <span style="float: right;">
    
-        <img src="../../../../assets/img/cover4.jpg" alt="">
+      <!-- <video src="{{movie.homepage}}"></video> -->
+      <video class="mt-5" width="500" controls>
+        <source src="{{movie.homepage}}" type="video/mp4">
+        <source src="{{movie.homepage}}" type="video/ogg">
+        Your browser does not support HTML video.
+      </video>
+        <!-- <img src="../../../../assets/img/cover4.jpg" alt=""> -->
     </span>
   <div class="text-white" style="margin-left: 260px;" >
     <p class="fs-3 mt-3 mb-3">
-      <i class="fa fa-star" style="color: deeppink;"></i>{{movie.vote_average}}
+      <i class="fa fa-star me-2" style="color: deeppink;"></i>{{movie.vote_average}}
       <span
         style="border: solid 1px gray; border-radius: 4px;padding:5px; color: gray; margin: 10px; text-align: center;">
         {{movie.original_language}} </span>

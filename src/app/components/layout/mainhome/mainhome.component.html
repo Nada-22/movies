@@ -26,7 +26,7 @@
         <div class="carousel-inner">
 
           <div class="item active" >
-            <div class="col-xs-12 col-sm-6 col-md-2" style="width: 0%; display: none;">
+            <div class="col-xs-12 col-sm-6 col-md-2" >
                 <a href="#"><img src="https://images.unsplash.com/photo-1524010349062-860def6649c3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e725946a3f177dce83a705d4b12019c2&auto=format&fit=crop&w=500&q=60" class="img-responsive center-block"></a>
                 <!-- <h4 class="text-center">ss</h4>
                 <h5 class="text-center">800 TK</h5> -->
@@ -36,7 +36,7 @@
           <div class="item" *ngFor="let movie of movies">
             <div class="col-xs-12 col-sm-6 col-md-2">
               <a routerLink="/view/{{movie.id}}" href="#"><img src='{{imgpath + movie.poster_path}} 'class="img-responsive center-block"></a>
-              <h4 class="text-center">{{movie.original_title}}</h4>
+              <h4 class="text-center">{{(movie.original_title.length>35)? (movie.original_title | slice:0:35 )+'...' : movie.original_title}}</h4>
               <h5 class="text-center "><i class="fa fa-star" style="color: deeppink;"></i>{{movie.vote_average}}/10</h5>
             </div>
           </div>

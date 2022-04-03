@@ -15,5 +15,12 @@ export class MoviesService {
   getdetails(movie_id:any) {
   
     return this._httpClient.get(this.url + `/movie/${movie_id}` + this.api_key);
-}
+  }
+  getrecommendations(movie_id:any) {
+    
+    
+    return this._httpClient.get(this.url + `/movie/${ movie_id }/recommendations` + this.api_key);
+
+    
+  }
 }
