@@ -1,5 +1,8 @@
+.container-fluid{
+    justify-content: space-around;
+}
 nav ,.logo:hover{
-    background-color: #2b2b31 !important;    
+    background-color: #2b2b31 !important;  
 }
 .logo{
     background-color: #28282d;
