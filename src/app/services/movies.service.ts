@@ -17,7 +17,7 @@ export class MoviesService {
     return this._httpClient.get(this.url + `/movie/${movie_id}` + this.api_key);
   }
   getrecommendations(movie_id:any) {    
-    return this._httpClient.get(this.url + `/movie/${ movie_id }/recommendations` + this.api_key);   
+    return this._httpClient.get(this.url + `/movie/${ movie_id }/similar` + this.api_key);   
   }
   getlatest() {
     return this._httpClient.get(this.url + `/movie/latest` + this.api_key);   
@@ -35,7 +35,12 @@ export class MoviesService {
   }
   movietrend() {
     
-    return this._httpClient.get(this.url + `/trending/movie/week` + this.api_key);   
+    return this._httpClient.get(this.url + `/trending/movie/day` + this.api_key);   
+
+  }
+  tvtrend() {
+    
+    return this._httpClient.get(this.url + `/trending/tv/week` + this.api_key);   
 
   }
 }

@@ -5,13 +5,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class MaxLengthPipe implements PipeTransform {
 
-  transform(value: string,length:number=15,suffix: string = '...'): string {
-    if(value.length>length){
-      let truncated: string = value.substring(0, length).trim() + suffix;
-      return truncated;
-    }
-    return value;
-  }
+  transform(value: string, args: any[]): string {
+    const limit = args.length > 0 ? parseInt(args[0], 10) : 20;
+    const trail = args.length > 1 ? args[1] : '...';
+    return value.length > limit ? value.substring(0, limit) + trail : value;
+   }
 
 }
 // 

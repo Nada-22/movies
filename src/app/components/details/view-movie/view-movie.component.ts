@@ -10,6 +10,7 @@ import { MoviesService } from 'src/app/services/movies.service';
 export class ViewMovieComponent implements OnInit {
   movie_id: any;
   movie: any;
+  similarmovie: any;
   imgpath = 'https://image.tmdb.org/t/p/w500';
 
   constructor(private _activatedRoute: ActivatedRoute , private _Moviesservices:MoviesService) { }
@@ -19,8 +20,8 @@ export class ViewMovieComponent implements OnInit {
       this.movie_id = params.get('MID');
     //  alert(this.movie_id)
       this.getmoviedetails();
+      this.getmovierecommendations(this.movie_id);
     });
-    // this.getmovierecommendations();
     
   }
 
@@ -38,12 +39,12 @@ export class ViewMovieComponent implements OnInit {
     )
     
   }
-  getmovierecommendations() {
-    this._Moviesservices.getrecommendations(this.movie_id).subscribe(
+  getmovierecommendations(id:any) {
+    this._Moviesservices.getrecommendations(id).subscribe(
       (res: any) => {
         // console.log(res);
-        this.movie = res;
-        console.log(this.movie);
+        this.similarmovie = res;
+        console.log(this.similarmovie);
         
       }, (err: any) => {
         console.log(err);

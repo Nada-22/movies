@@ -17,6 +17,7 @@ export class MainhomeComponent implements OnInit {
   topratedmovies: any;
   imgpath = 'https://image.tmdb.org/t/p/w500';
   faFire = faFire;
+  trenddingtvweek: any;
 
   constructor(private _moviesservice:MoviesService) { }
 
@@ -25,6 +26,8 @@ export class MainhomeComponent implements OnInit {
     this.getoprated();
     this.gettrendding();
     this.getmovietrend();
+    this.gettvtrend();
+
     // this.getlatestmovies();
     $(document).ready(function(){
 
@@ -92,4 +95,13 @@ export class MainhomeComponent implements OnInit {
   })
     }
   
+    gettvtrend() {
+      this._moviesservice.tvtrend().subscribe(
+        (res: any) => {
+          this.trenddingtvweek = res.results;
+          console.log(this.trenddingtvweek);
+        }, (error: any) => {
+          console.log(error)
+    })
+      }
 }
