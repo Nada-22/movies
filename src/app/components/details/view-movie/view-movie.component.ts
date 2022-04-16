@@ -12,7 +12,7 @@ export class ViewMovieComponent implements OnInit {
   movie: any;
   similarmovie: any;
   imgpath = 'https://image.tmdb.org/t/p/w500';
-
+  first: any;
   constructor(private _activatedRoute: ActivatedRoute , private _Moviesservices:MoviesService) { }
 
   ngOnInit(): void {
@@ -22,7 +22,7 @@ export class ViewMovieComponent implements OnInit {
       this.getmoviedetails();
       this.getmovierecommendations(this.movie_id);
     });
-    
+ 
   }
 
   getmoviedetails() {
@@ -43,7 +43,8 @@ export class ViewMovieComponent implements OnInit {
     this._Moviesservices.getrecommendations(id).subscribe(
       (res: any) => {
         // console.log(res);
-        this.similarmovie = res;
+        this.similarmovie = res.results;
+        this.first = this.similarmovie[17];
         console.log(this.similarmovie);
         
       }, (err: any) => {
