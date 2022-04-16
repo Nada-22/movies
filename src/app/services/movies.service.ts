@@ -33,4 +33,9 @@ export class MoviesService {
     return this._httpClient.get(this.url + `/trending/all/day` + this.api_key);   
 
   }
+  movietrend() {
+    
+    return this._httpClient.get(this.url + `/trending/movie/week` + this.api_key);   
+
+  }
 }

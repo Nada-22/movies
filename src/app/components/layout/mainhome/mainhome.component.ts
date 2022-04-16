@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { MoviesService } from 'src/app/services/movies.service';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faFire } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-mainhome',
   templateUrl: './mainhome.component.html',
@@ -10,14 +12,19 @@ export class MainhomeComponent implements OnInit {
   movies: any[] = [];
   first!: any;
   trenddingmovies: any;
+  trenddingmoviesweek: any;
+
   topratedmovies: any;
   imgpath = 'https://image.tmdb.org/t/p/w500';
+  faFire = faFire;
+
   constructor(private _moviesservice:MoviesService) { }
 
   ngOnInit(): void {
     this.getmovies();
     this.getoprated();
     this.gettrendding();
+    this.getmovietrend();
     // this.getlatestmovies();
     $(document).ready(function(){
 
@@ -55,21 +62,13 @@ export class MainhomeComponent implements OnInit {
       
 )
   }
-//   getlatestmovies() {
-//     this._moviesservice.getlatest().subscribe(
-//       (res: any) => {
-//         console.log(res);
-        
-//       }, (error: any) => {
-//         console.log(error)
-//   })
-// }
+
   
     getoprated() {
     this._moviesservice.getoprated().subscribe(
       (res: any) => {
         this.topratedmovies = res.results;
-        console.log(this.topratedmovies);
+        // console.log(this.topratedmovies);
       }, (error: any) => {
         console.log(error)
   })
@@ -82,5 +81,15 @@ export class MainhomeComponent implements OnInit {
         }, (error: any) => {
           console.log(error)
     })
-  }
+    }
+  getmovietrend() {
+    this._moviesservice.movietrend().subscribe(
+      (res: any) => {
+        this.trenddingmoviesweek = res.results;
+        // console.log(this.trenddingmoviesweek);
+      }, (error: any) => {
+        console.log(error)
+  })
+    }
+  
 }
