@@ -1,7 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { MoviesService } from 'src/app/services/movies.service';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
+
+
 import { faFire } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-mainhome',
@@ -18,7 +24,8 @@ export class MainhomeComponent implements OnInit {
   imgpath = 'https://image.tmdb.org/t/p/w500';
   faFire = faFire;
   trenddingtvweek: any;
-
+  faArrowCircleLeft = faArrowLeft;
+  faArrowCircleRight = faArrowRight;
   constructor(private _moviesservice:MoviesService) { }
 
   ngOnInit(): void {

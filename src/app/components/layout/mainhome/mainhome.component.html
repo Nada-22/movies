@@ -11,6 +11,17 @@
     <div class="container ">
       <div class="row">
         <div class="col-md-6 text-white m-5">
+          <div style="float: right;">
+            <a class="btn cursol">
+
+              <fa-icon class="left" href="#itemslider" data-slide="prev" 
+              [icon]="faArrowCircleLeft" style="color: rgb(218, 206, 206); font-size: x-large;"></fa-icon>
+            </a>
+           <a class="btn cursol">
+             <fa-icon class="right" href="#itemslider" data-slide="next" 
+             [icon]="faArrowCircleRight" style="color: rgb(218, 206, 206); font-size: x-large;"></fa-icon>
+           </a>
+          </div>
           <p>
             <span class="fw-bold fs-1">NEW MOVIES </span>
             <span class="fs-3"> ALL IN ONE PLACE</span>
@@ -28,7 +39,7 @@
             <div class="carousel-inner">
 
               <div class="item active">
-                <div class="col-xs-12 col-sm-6 col-md-2">
+                <div class="col-xs-3 col-sm-6 col-md-2">
                   <a routerLink="/view/{{first.id}}" href="#"><img src="{{imgpath+first.poster_path}}"
                       class="img-responsive center-block"></a>
                   <h4 class="text-center">{{first.original_title}}</h4>
@@ -38,7 +49,7 @@
               </div>
 
               <div class="item" *ngFor="let movie of movies">
-                <div class="col-xs-12 col-sm-6 col-md-2">
+                <div class="col-xs-3 col-sm-3 col-md-2">
                   <a routerLink="/view/{{movie.id}}" href="#"><img src='{{imgpath + movie.poster_path}} '
                       class="img-responsive center-block"></a>
                   <h4 class="text-center">
@@ -49,26 +60,46 @@
                   </h5>
                 </div>
               </div>
-
-
-
+              
+              
+              
             </div>
 
-            <div id="slider-control">
-              <a class="left carousel-control" href="#itemslider" data-slide="prev"><img width="60%"
-                  src="https://cdn0.iconfinder.com/data/icons/website-kit-2/512/icon_402-512.png" alt="Left"
-                  class="img-responsive"></a>
-              <a class="right carousel-control" href="#itemslider" data-slide="next"><img
-                  src="https://pixsector.com/cache/81183b13/avcc910c4ee5888b858fe.png" alt="Right"
-                  class="img-responsive"></a>
+            <!-- <div id="slider-control">
+             
+              <a class="left carousel-control" href="#itemslider" data-slide="prev">
+                <img width="60%" src="https://cdn0.iconfinder.com/data/icons/website-kit-2/512/icon_402-512.png"
+                alt="Left" class="img-responsive"></a>
+                <a class="right carousel-control" href="#itemslider" data-slide="next">
+                  <img src="https://pixsector.com/cache/81183b13/avcc910c4ee5888b858fe.png" 
+                  alt="Right" class="img-responsive"></a>
+                </div> -->
+              </div>
             </div>
           </div>
+          <!-- top rated -->
+      <!-- <div class="col-md-6 text-white m-5">
+        <div style="float: right;">
+          <a class="btn cursol">
+      
+            <fa-icon class="left" href="#itemslider" data-slide="prev" 
+            [icon]="faArrowCircleLeft" style="color: rgb(218, 206, 206); font-size: x-large;"></fa-icon>
+          </a>
+         <a class="btn cursol">
+           <fa-icon class="right" href="#itemslider" data-slide="next" 
+           [icon]="faArrowCircleRight" style="color: rgb(218, 206, 206); font-size: x-large;"></fa-icon>
+         </a>
         </div>
-      </div>
+        <p>
+          <span class="fw-bold fs-1">Top MOVIES </span>
+          <span class="fs-3"> ALL IN ONE PLACE</span>
+        </p>
+      </div> -->
     </div>
     <!-- Item slider end-->
-    <br /><br />
+    <br/><br />
   </div>
+
 <section class="content dar bord">
   <div class="content__head head">
     <div class="">
