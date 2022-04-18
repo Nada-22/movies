@@ -43,4 +43,7 @@ export class MoviesService {
     return this._httpClient.get(this.url + `/trending/tv/week` + this.api_key);   
 
   }
+  movievedio(movie_id: any) { 
+    return this._httpClient.get(this.url + `/movie/${movie_id}/videos` + this.api_key);   
+  }
 }

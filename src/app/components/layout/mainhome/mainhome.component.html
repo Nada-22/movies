@@ -10,17 +10,17 @@
   <div class="home3">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 text-white m-5">
-          <div style="float: right;">
+        <div class="col-md-12 text-white m-5">
+          <div style="float: right;" class="d-flex justify-content-end ">
             <a class="btn cursol">
 
-              <fa-icon class="left" href="#itemslider" data-slide="prev" 
-              [icon]="faArrowCircleLeft" style="color: rgb(218, 206, 206); font-size: x-large;"></fa-icon>
+              <fa-icon class="left" href="#itemslider" data-slide="prev" [icon]="faArrowCircleLeft"
+                style="color: rgb(218, 206, 206); font-size: x-large;"></fa-icon>
             </a>
-           <a class="btn cursol">
-             <fa-icon class="right" href="#itemslider" data-slide="next" 
-             [icon]="faArrowCircleRight" style="color: rgb(218, 206, 206); font-size: x-large;"></fa-icon>
-           </a>
+            <a class="btn cursol">
+              <fa-icon class="right" href="#itemslider" data-slide="next" [icon]="faArrowCircleRight"
+                style="color: rgb(218, 206, 206); font-size: x-large;"></fa-icon>
+            </a>
           </div>
           <p>
             <span class="fw-bold fs-1">NEW MOVIES </span>
@@ -60,9 +60,9 @@
                   </h5>
                 </div>
               </div>
-              
-              
-              
+
+
+
             </div>
 
             <!-- <div id="slider-control">
@@ -74,10 +74,10 @@
                   <img src="https://pixsector.com/cache/81183b13/avcc910c4ee5888b858fe.png" 
                   alt="Right" class="img-responsive"></a>
                 </div> -->
-              </div>
-            </div>
           </div>
-          <!-- top rated -->
+        </div>
+      </div>
+      <!-- top rated -->
       <!-- <div class="col-md-6 text-white m-5">
         <div style="float: right;">
           <a class="btn cursol">
@@ -97,218 +97,215 @@
       </div> -->
     </div>
     <!-- Item slider end-->
-    <br/><br />
+    <br /><br />
   </div>
 
-<section class="content dar bord">
-  <div class="content__head head">
-    <div class="">
+  <section class="content dar bord">
+    <div class="content__head head">
       <div class="">
-        <div class="col-12 trend" style="background-color: #28282E; border-top: solid 4px deeppink;">
-          <!-- content title -->
-          <h1 class="content__title mb-3 text-light fs-1">Trending</h1>
-          <!-- end content title -->
+        <div class="">
+          <div class="col-12 trend" style="background-color: #28282E; border-top: solid 4px deeppink;">
+            <!-- content title -->
+            <h1 class="content__title mb-3 text-light fs-1">Trending</h1>
+            <!-- end content title -->
 
-          <!-- content tabs nav -->
-          <ul class="nav nav-tabs content__tabs" id="content__tabs" role="tablist"
-           >
-            <li class="nav-item" role="presentation">
-              <a class="nav-link active trendsize" data-toggle="tab" href="#tab-1" 
-              role="tab" aria-controls="tab-1"
-                aria-selected="true">This Day</a>
-            </li>
+            <!-- content tabs nav -->
+            <ul class="nav nav-tabs content__tabs" id="content__tabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link active trendsize" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1"
+                  aria-selected="true">This Day</a>
+              </li>
 
-            <li class="nav-item" role="presentation">
-              <a class="nav-link trendsize" data-toggle="tab" href="#tab-2" 
-              role="tab" aria-controls="tab-2"
-                aria-selected="false">MOVIES</a>
-            </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link trendsize" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2"
+                  aria-selected="false">MOVIES</a>
+              </li>
 
-            <li class="nav-item" role="presentation">
-              <a class="nav-link trendsize" data-toggle="tab" href="#tab-3" 
-              role="tab" aria-controls="tab-3"
-                aria-selected="false">TV SERIES</a>
-            </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link trendsize" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3"
+                  aria-selected="false">TV SERIES</a>
+              </li>
 
 
-          </ul>
-          <!-- end content tabs nav -->
+            </ul>
+            <!-- end content tabs nav -->
 
-          <!-- content mobile tabs nav -->
-          <div class="content__mobile-tabs" id="content__mobile-tabs">
-            <div class="content__mobile-tabs-btn dropdown-toggle" role="navigation" id="mobile-tabs"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span></span>
+            <!-- content mobile tabs nav -->
+            <div class="content__mobile-tabs" id="content__mobile-tabs">
+              <div class="content__mobile-tabs-btn dropdown-toggle" role="navigation" id="mobile-tabs"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span></span>
+              </div>
+
+              <div class="content__mobile-tabs-menu dropdown-menu" aria-labelledby="mobile-tabs">
+                <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" id="1-tab" data-toggle="tab" href="#tab-1" role="tab"
+                      aria-controls="tab-1" aria-selected="true">This Day</a></li>
+
+                  <li class="nav-item"><a class="nav-link" id="2-tab" data-toggle="tab" href="#tab-2" role="tab"
+                      aria-controls="tab-2" aria-selected="false">MOVIES</a></li>
+
+                  <li class="nav-item"><a class="nav-link" id="3-tab" data-toggle="tab" href="#tab-3" role="tab"
+                      aria-controls="tab-3" aria-selected="false">TV SERIES</a></li>
+
+                </ul>
+              </div>
             </div>
-
-            <div class="content__mobile-tabs-menu dropdown-menu" aria-labelledby="mobile-tabs">
-              <ul class="nav nav-tabs" role="tablist">
-                <li class="nav-item"><a class="nav-link active" id="1-tab" data-toggle="tab" href="#tab-1" role="tab"
-                    aria-controls="tab-1" aria-selected="true">This Day</a></li>
-
-                <li class="nav-item"><a class="nav-link" id="2-tab" data-toggle="tab" href="#tab-2" role="tab"
-                    aria-controls="tab-2" aria-selected="false">MOVIES</a></li>
-
-                <li class="nav-item"><a class="nav-link" id="3-tab" data-toggle="tab" href="#tab-3" role="tab"
-                    aria-controls="tab-3" aria-selected="false">TV SERIES</a></li>
-
-              </ul>
-            </div>
+            <!-- end content mobile tabs nav -->
           </div>
-          <!-- end content mobile tabs nav -->
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="container">
-    <!-- content tabs -->
-    <div class="tab-content" id="myTabContent">
-      <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="1-tab">
-        <div class="row row--grid">
-          <!-- card -->
-          <div class="mb-3">
-      
-            <div class="movie_card" id="bright" *ngFor="let daytrend of trenddingmovies">
-              <div class="info_section">
-                <div class="movie_header">
-                  <img class="locandina" src="{{imgpath + daytrend.poster_path}}"/>
-                  <h1 *ngIf="daytrend.original_title">
-                    <!-- {{(daytrend.original_title.length >15)? (daytrend.original_title | slice:0:15 )+'...' : daytrend.original_title}} -->
+    <div class="container">
+      <!-- content tabs -->
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="1-tab">
+          <div class="row row--grid">
+            <!-- card -->
+            <div class="mb-3">
 
-                    {{daytrend.original_title | maxlength:[15]}}
-                  </h1>
-                  <h1>
-                    {{daytrend.original_name }}
+              <div class="movie_card" id="bright" *ngFor="let daytrend of trenddingmovies">
+                <div class="info_section">
+                  <div class="movie_header">
+                    <img class="locandina" src="{{imgpath + daytrend.poster_path}}" />
+                    <h1 *ngIf="daytrend.original_title">
+                      <!-- {{(daytrend.original_title.length >15)? (daytrend.original_title | slice:0:15 )+'...' : daytrend.original_title}} -->
 
-                  </h1>
-                  <h4>{{daytrend.release_date | date}}</h4>
-                  <!-- <span class="minutes" style="border: solid .5px  rgb(146, 138, 123) !important; text-align: center;">
+                      {{daytrend.original_title | maxlength:[15]}}
+                    </h1>
+                    <h1>
+                      {{daytrend.original_name }}
+
+                    </h1>
+                    <h4>{{daytrend.release_date | date}}</h4>
+                    <!-- <span class="minutes" style="border: solid .5px  rgb(146, 138, 123) !important; text-align: center;">
                     {{daytrend.original_language}}</span> -->
-                      <i class="fa fa-star" style="color: deeppink; font-size: small;">
-                        <span class="text-white">
+                    <i class="fa fa-star" style="color: deeppink; font-size: small;">
+                      <span class="text-white">
 
-                          {{daytrend.vote_average}}
-                        </span>
-                      </i>
+                        {{daytrend.vote_average}}
+                      </span>
+                    </i>
+                  </div>
+                  <div class="movie_desc">
+                    <p class="text">
+                      {{daytrend.overview | maxlength:[200]}}
+                    </p>
+                  </div>
+                  <div class="movie_social">
+                    <ul>
+                      <li>
+                        <p class="type" style="color: deeppink;">{{daytrend.media_type}}</p>
+
+                      </li>
+                      <li style="color: white;">
+                        <fa-icon [icon]="faFire" style="color: deeppink; font-size: small;"></fa-icon>
+                        {{daytrend.vote_count}}
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="movie_desc">
-                  <p class="text">
-                   {{daytrend.overview | maxlength:[200]}}
+                <div class="blur_back bright_back" style="background-image: url({{imgpath+daytrend.backdrop_path}});">
+
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+        </div>
+        <!-- end part 1 -->
+
+        <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="2-tab">
+          <div class="row row--grid">
+            <!-- card -->
+            <div class="col-12">
+              <hr>
+              <div class="profile-card-6" *ngFor="let movietrend of trenddingmoviesweek">
+                <img routerLink="/view/{{movietrend.id}}" src="{{imgpath + movietrend.poster_path}}"
+                  class="img img-responsive">
+                <div class="profile-name">{{movietrend.original_title}}
+                  <br>
+                  <p class="fs-6 ">
+                    {{movietrend.release_date | date}}
                   </p>
                 </div>
-                <div class="movie_social">
-                  <ul>
-                    <li>
-                  <p class="type" style="color: deeppink;">{{daytrend.media_type}}</p>
-                      
-                     </li>
-                    <li style="color: white;">
-                      <fa-icon [icon]="faFire" style="color: deeppink; font-size: small;"></fa-icon>
-                       {{daytrend.vote_count}}   
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="blur_back bright_back" style="background-image: url({{imgpath+daytrend.backdrop_path}});">
-                
-              </div>
-            </div>
-            
-           
-          </div>
-
-        </div>
-      </div>
-<!-- end part 1 -->
-
-      <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="2-tab">
-        <div class="row row--grid">
-          <!-- card -->
-          <div class="col-12">
-            <hr>
-            <div class="profile-card-6" *ngFor="let movietrend of trenddingmoviesweek">
-              <img routerLink="/view/{{movietrend.id}}" src="{{imgpath + movietrend.poster_path}}"
-                class="img img-responsive">
-              <div class="profile-name" >{{movietrend.original_title}}
-                <br> <p class="fs-6 " >
-                  {{movietrend.release_date | date}}
-                </p>
-              </div>
-              <!-- <div class="profile-position">{{movietrend.release_date}}</div> -->
-              <div class="profile-overview">
+                <!-- <div class="profile-position">{{movietrend.release_date}}</div> -->
                 <div class="profile-overview">
-                  <div class="text-center">
-                    <div class="col-xs-4">
-                      <h3>{{movietrend.vote_average}}</h3>
-                      <p >Rank</p>
-                    </div>
-                    <div class="col-xs-4">
-                      <h3>{{movietrend.vote_count}}</h3>
-                      <p>Matches</p>
-                    </div>
-                    <div class="col-xs-4">
-                      <h3>{{movietrend.popularity}}</h3>
-                      <p >popularity</p>
+                  <div class="profile-overview">
+                    <div class="text-center">
+                      <div class="col-xs-4">
+                        <h3>{{movietrend.vote_average}}</h3>
+                        <p>Rank</p>
+                      </div>
+                      <div class="col-xs-4">
+                        <h3>{{movietrend.vote_count}}</h3>
+                        <p>Matches</p>
+                      </div>
+                      <div class="col-xs-4">
+                        <h3>{{movietrend.popularity}}</h3>
+                        <p>popularity</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+
+
+
             </div>
+            <!-- end card -->
 
-
-    
           </div>
-          <!-- end card -->
-
         </div>
-      </div>
-<!-- end part 2 -->
-      <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="3-tab">
-        <div class="row row--grid">
-          <!-- card -->
-          <div class="col-12">
-            <hr>
-            <div class="profile-card-6" *ngFor="let tv of trenddingtvweek">
-              <img routerLink="/view/{{tv.id}}" src="{{imgpath + tv.poster_path}}"
-                class="img img-responsive">
-              <div class="profile-name">{{tv.original_name}}
-                <br> <p class="fs-6 " >
-                  {{tv.first_air_date | date}}
-                </p>
-                  
-              </div>
-              <!-- <div class="profile-position"></div> -->
-              <div class="profile-overview">
+        <!-- end part 2 -->
+        <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="3-tab">
+          <div class="row row--grid">
+            <!-- card -->
+            <div class="col-12">
+              <hr>
+              <div class="profile-card-6" *ngFor="let tv of trenddingtvweek">
+                <img routerLink="/view/{{tv.id}}" src="{{imgpath + tv.poster_path}}" class="img img-responsive">
+                <div class="profile-name">{{tv.original_name}}
+                  <br>
+                  <p class="fs-6 ">
+                    {{tv.first_air_date | date}}
+                  </p>
+
+                </div>
+                <!-- <div class="profile-position"></div> -->
                 <div class="profile-overview">
-                  <div class="text-center">
-                    <div class="col-xs-4">
-                      <h3>{{tv.vote_average}}</h3>
-                      <p >Rank</p>
+                  <div class="profile-overview">
+                    <div class="text-center">
+                      <div class="col-xs-4">
+                        <h3>{{tv.vote_average}}</h3>
+                        <p>Rank</p>
+                      </div>
+                      <div class="col-xs-4">
+                        <h3>{{tv.vote_count}}</h3>
+                        <p>Matches</p>
+                      </div>
+                      <div class="col-xs-4">
+                        <h3>{{tv.popularity}}</h3>
+                        <p>popularity</p>
+                      </div>
                     </div>
-                    <div class="col-xs-4">
-                      <h3>{{tv.vote_count}}</h3>
-                      <p>Matches</p>
-                    </div>
-                    <div class="col-xs-4">
-                      <h3>{{tv.popularity}}</h3>
-                      <p >popularity</p>
-                    </div>
-                  </div>
-                </div>>
+                  </div>>
+                </div>
               </div>
+
+
+
             </div>
+            <!-- end part 3 -->
 
-
-    
           </div>
-          <!-- end part 3 -->
-
         </div>
-      </div>
 
+      </div>
+      <!-- end content tabs -->
     </div>
-    <!-- end content tabs -->
-  </div>
-</section>
+  </section>
 </div>

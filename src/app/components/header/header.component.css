@@ -1,5 +1,5 @@
 .container-fluid{
-    justify-content: space-around;
+    justify-content: space-between !important;
 }
 nav ,.logo:hover{
     background-color: #2b2b31 !important;  
@@ -27,6 +27,6 @@ nav ,.logo:hover{
         width: 90px;
     }
     .container-fluid ,nav {
-        max-width: 100%;
+        /* max-width: 100%; */
     }
 }
