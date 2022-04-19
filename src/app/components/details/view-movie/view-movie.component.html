@@ -26,11 +26,15 @@
     <div class="text-white" style="margin-left: 260px;">
       <p class="fs-3 mt-3 mb-3">
         <i class="fa fa-star me-2" style="color: deeppink;"></i>{{movie.vote_average}}
-        <span
+        <!-- <span
           style="border: solid 1px gray; border-radius: 4px;padding:5px; color: gray; margin: 10px; text-align: center;">
-          {{movie.original_language}} </span>
+          {{movie.original_language}} </span> -->
       </p>
-      <p class="fs-3">Genre : <span *ngFor="let genres of movie.genres"> {{genres.name }}, </span> </p>
+      <p class="fs-3">
+        <span  style="border: solid 1px gray; border-radius: 4px;padding:5px; color: gray; margin: 5px; text-align: center;"
+         *ngFor="let genres of movie.genres"> {{genres.name }} </span> 
+        </p>
+      <p class="fs-3">language: {{movie.spoken_languages[0].name}}</p>
       <p class="fs-3">Release year: {{movie.release_date|date}}</p>
       <p class="fs-3"> Running time: {{movie.runtime }} min</p>
       <p class="fs-3">
@@ -54,45 +58,7 @@
     </div>
    
       <!-- Item slider-->
-      <div class="container-fluid">
-
-        <div class="row">
-          <div class="col-xs-10 col-sm-12 col-md-12">
-            <div class="carousel carousel-showmanymoveone slide" id="itemslider">
-              <div class="carousel-inner">
-
-                <div class="item active">
-                  <div class="col-xs-3 col-sm-6 col-md-2">
-                    <a routerLink="/view/{{first.id}}" href="#"><img src="{{imgpath+first.poster_path}}"
-                        class="img-responsive center-block"></a>
-                    <h4 class="text-center">{{first.original_title}}</h4>
-                    <h5 class="text-center">
-                      <i class="fa fa-star" style="color: deeppink;"></i>{{first.vote_average}}/10</h5>
-                  </div>
-                </div>
-
-                <div class="item" *ngFor="let same of similarmovie">
-                  <div class="col-xs-3 col-sm-3 col-md-2">
-                    <a routerLink="/view/{{same.id}}" href="#">
-                      <img src='../../../../assets/img/cover4.jpg' class="img-responsive center-block"></a>
-                    <h4 class="text-center">
-                      {{(same.original_title.length>35)? (same.original_title | slice:0:35 )+'...' : same.original_title}}
-                    </h4>
-                    <h5 class="text-center">
-                      <i class="fa fa-star" style="color: deeppink;"></i>{{same.vote_average}}/10
-                    </h5>
-                  </div>
-                </div>
-              </div>
-
-
-            </div>
-          </div>
-        </div>
-
-
-
-      </div>
+     
       <!-- Item slider end-->
       <br/><br/>
   </section>
