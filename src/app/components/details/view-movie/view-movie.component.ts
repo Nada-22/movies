@@ -12,9 +12,11 @@ export class ViewMovieComponent implements OnInit {
   movie: any;
   similarmovie: any;
   imgpath = 'https://image.tmdb.org/t/p/w500';
+             
   first: any;
   movievedio: string = '';
   vediopath = 'https://www.youtube.com/embed/';
+  reviews: any[]=[];
   constructor(private _activatedRoute: ActivatedRoute , private _Moviesservices:MoviesService) { }
 
   ngOnInit(): void {
@@ -24,6 +26,7 @@ export class ViewMovieComponent implements OnInit {
       this.getmoviedetails();
       this.getmovierecommendations(this.movie_id);
       this.getmovievedio(this.movie_id);
+      this.getmoviereviews(this.movie_id);
     });
 
   }
@@ -70,5 +73,22 @@ export class ViewMovieComponent implements OnInit {
       }
     )
   }
- 
+  getmoviereviews(id: any) { 
+    this._Moviesservices.reviews(id).subscribe(
+      (res: any) => {
+        // console.log(res);
+        // this.reviews = res.results;
+        for(let i=0;i<res.results.length;i++){
+          if(i<4){
+            this.reviews.push(res.results[i]);
+           }
+        }
+        console.log(this.reviews);
+        
+      }, (err: any) => {
+        console.log(err);
+        
+      }
+)
+  }
 }
