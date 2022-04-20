@@ -29,15 +29,18 @@
     <div class="text-white" style="margin-left: 260px;">
       <p class="fs-3 mt-3 mb-3">
         <i class="fa fa-star me-2" style="color: deeppink;"></i>{{movie.vote_average}}
-        <!-- <span
-          style="border: solid 1px gray; border-radius: 4px;padding:5px; color: gray; margin: 10px; text-align: center;">
-          {{movie.original_language}} </span> -->
+        <span
+         > <i class="far fa-eye ms-3" style="color: deeppink;"></i>
+        {{movie.vote_count}}</span>
       </p>
       <p class="fs-3">
         <span  style="border: solid 1px gray; border-radius: 4px;padding:5px; color: gray; margin: 5px; text-align: center;"
          *ngFor="let genres of movie.genres"> {{genres.name }} </span> 
         </p>
-      <p class="fs-3">language: {{movie.spoken_languages[0].name}}</p>
+      <p class="fs-3 fw-bold">language: 
+        <span class="fw-normal">
+        {{movie.spoken_languages[0].name}}
+      </span> </p>
       <p class="fs-3">Release year: {{movie.release_date|date}}</p>
       <p class="fs-3"> Running time: {{movie.runtime }} min</p>
       <p class="fs-3">
@@ -65,18 +68,22 @@
 
 
   <!-- commints -->
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-<div class="container">
+<div class="container" >
 <div class="row">
-  <h1 class="text-white"> Reviews</h1>
-    <div class="col-md-6 fs-4 mb-5" *ngFor="let review of reviews">
+  <div class="col-12" style="background-color: #28282E;">
+    <h1 class="p-5 text-light fs-1" style="margin-bottom: 0px !important;">Reviews</h1>
+  </div>
+
+  
+  <!-- <h1 class="text-white"> Reviews</h1> -->
+    <div class="col-md-6 fs-4 mb-5 " *ngFor="let review of reviews" >
         <div class="media g-mb-30 media-comment">
             <img *ngIf="review.author_details.avatar_path" class="d-flex g-width-50 g-height-50 rounded-circle g-mt-3 g-mr-15" 
             src="{{imgpath + review.author_details.avatar_path}}" alt="Image Description">
             <img *ngIf="!review.author_details.avatar_path" 
             class="d-flex g-width-50 g-height-50 rounded-circle g-mt-3 g-mr-15"
             src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="">
-            <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
+            <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30" >
               <div class="g-mb-15">
                 <h5 class="h5 g-color-gray-dark-v1 mb-0">{{review.author}}</h5>
                 <span class="g-color-gray-dark-v4 g-font-size-12">{{review.created_at |date}}</span>
